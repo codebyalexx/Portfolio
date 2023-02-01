@@ -1,0 +1,109 @@
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #fff;
+
+  &-brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-icon {
+      height: 50px;
+      width: 50px;
+      margin-right: 8px;
+    }
+
+    &-title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      color: #343434;
+    }
+  }
+
+  &-menu {
+    box-sizing: border-box;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-inline-start: 0;
+
+    @media screen and (max-width: 900px) {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      width: 100%;
+      z-index: 999;
+    }
+  }
+
+  &-item {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 17px;
+    color: #343434;
+    transition: all 200ms ease-in-out;
+    margin: 0 17.5px;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      border-top: 2px solid #eee;
+    }
+
+    &:hover {
+      color: #ffcf22;
+    }
+  }
+
+  &-link {
+    color: #343434;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+      width: 100%;
+    }
+
+    &:hover {
+      color: #ffcf22;
+    }
+  }
+
+  &-small {
+    justify-content: flex-end;
+    align-items: center;
+    display: none;
+  }
+
+  &-toggler-image {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 20px;
+
+    &-large {
+      display: none;
+    }
+
+    &-small {
+      display: flex;
+    }
+  }
+}

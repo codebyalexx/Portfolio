@@ -1,0 +1,13 @@
+.bg {
+  &-shapes {
+    background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(../../assets/common-bg.svg);
+  }
+
+  &-gray {
+    background: #f1f1f1;
+  }
+
+  &-black {
+    background: #000;
+  }
+}

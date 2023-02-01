@@ -1,0 +1,86 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  min-height: 80rem;
+  max-height: 120rem;
+  position: relative;
+
+  &-title {
+    font-size: 55px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+
+    @media screen and (max-width: 900px) {
+      font-size: 45px;
+    }
+  }
+
+  &-info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-summary {
+    font-size: 24px;
+    text-align: center;
+    max-width: 50%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 30px 0 50px;
+  }
+
+  &-projs-btn {
+    display: block;
+    text-decoration: none;
+    background-color: #ffcf22;
+    color: rgb(46, 46, 46);
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 17px 100px;
+    border-radius: 6px;
+    transition: transform 200ms ease-in-out;
+    transform: translateY(0px);
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  &-socials {
+    position: absolute;
+    left: 0;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px 0px #67676773;
+
+    @media screen and (max-width: 900px) {
+      margin-top: 45px;
+      position: initial;
+    }
+
+    &-link {
+      display: block;
+      padding: 15px;
+      border-radius: 6px;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        background-color: #faff97;
+      }
+    }
+
+    &-icon {
+      height: 35px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+/* Utils */
+@import 'utils/variables';
+
+/* Base */
+@import 'base/reset';
+
+/* Components */
+@import 'components/alerts';
+@import 'components/container';
+@import 'components/backgrounds';
+
+/* Layout */
+@import 'layout/navbar';
+@import 'layout/footer';
+@import 'layout/hero';
+@import 'layout/about-me';
+@import 'layout/projects';
+@import 'layout/contact';
+
+/* Vendors */
+@import 'vendors/fontawesome';
