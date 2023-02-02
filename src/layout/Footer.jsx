@@ -1,5 +1,7 @@
 import {Component} from "react";
 import githubIcon from "../assets/github.png";
+import discordIcon from "../assets/discord.png";
+import twitterIcon from "../assets/twitter.png";
 import t from '../utils/translate';
 
 export default class Footer extends Component {
@@ -14,6 +16,12 @@ export default class Footer extends Component {
                     <span className="footer-social">Social</span>
                     <a href="https://github.com/AlexandreLG2022" className="footer-social-link" target="_blank" rel="noreferrer">
                         <img src={githubIcon} alt="Icône de GitHub" className="footer-social-icon"/>
+                    </a>
+                    <a href="https://discord.gg/E6CTED7p6K" className="footer-social-link" target="_blank" rel="noreferrer">
+                        <img src={discordIcon} alt="Icône de Discord" className="footer-social-icon"/>
+                    </a>
+                    <a href="https://twitter.com/AlexLC_TV" className="footer-social-link" target="_blank" rel="noreferrer">
+                        <img src={twitterIcon} alt="Icône de Twitter" className="footer-social-icon"/>
                     </a>
                 </div>
             </div>
