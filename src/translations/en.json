@@ -1,0 +1,51 @@
+{
+  "": "",
+
+  "_navbar": "",
+  "Alex Développement": "Alex Development",
+  "Accueil": "Home",
+  "A propos": "About",
+  "Projets": "Projects",
+  "Contact": "Contact",
+
+  "_hero": "",
+  "Je suis Alex Développement": "Im Alex Développement",
+  "Je suis un Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès": "I'm a Frontend Web Developer who designs web applications that drive the finished product to success",
+
+  "_about":  "",
+  "Ici vous trouverez plus d'informations à propos de moi, ce que je fais, et mes compétences actuelles de programmation informatique.": "Here you will find more information about me, what I do, and my current computer programming skills.",
+  "En apprendre plus !": "Learn more!",
+  "Je suis un Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès. Regardez mes traveaux dans la séction Projets.": "\nI am a Frontend Web Developer who designs web applications that drive the finished product to success. Check out my work in the Projects section.",
+  "J'ai commencé le Développement Web à l'âge de 12 ans par passion, ce qui m'a permis de forger des compétences solides au fil des années passées.": "I started Web Development at 12 years old out of passion, which allowed me to forge solid skills over the years.",
+  "Je suis ouvert aux Opportunitées de travail où je pourrais contribuer, apprendre et grandir. Si vous avez un projet qui correspond à mes compétences et mon expérience, alors n'hésitez pas à me contacter.": "\nI am open to Work Opportunities where I could contribute, learn and grow. If you have a project that matches my skills and experience, then don't hesitate to contact me.",
+  "Me Contacter": "Contact Me",
+  "Mes Compétences": "My Skills",
+
+  "_projects": "",
+  "Ici vous trouverez quelques uns de mes projets personnels et professionnels.": "Here you will find some of my personal and professional projects.",
+  "Projet Professionnel": "Professional Project",
+  "Je suis actuellement posté en tant que Développeur au coeur d'Unosial, un groupe de bénévoles situé principalement sur Discord qui propose divers services pour des projets et des communautés.": "I am currently posted as a Developer at the heart of Unosial, a group of volunteers located mainly on Discord that offers various services for projects and communities.",
+  "Visiter": "Visit",
+  "Projet de Formation": "Course Project",
+  "Reservia est une page web statique d'un moteur d'hébergements / de logements. C'est la première intégration que j'ai réalisé au cours de ma formation OpenClassrooms.": "Reservia is a static web page of an accommodation / accommodation engine. This is the first integration I made during my OpenClassrooms training.",
+  "FishEye est un site web accessible et dynamique repertoriant différents photographes, leurs photos et leurs tarifs. C'est un projet que j'ai réalisé durant ma formation de A à Z.": "FishEye is an accessible and dynamic website listing different photographers, their photos and their prices. This is a project that I realized during my training from A to Z.",
+
+  "_contact": "",
+  "N'hésitez pas à me contacter via le formulaire ci-dessous pour prendre une prise de contact rapidement": "Do not hesitate to contact me via the form below to make contact quickly",
+  "Nom": "Name",
+  "Email": "Email",
+  "Message": "Message",
+  "Envoie en cours...": "Sending...",
+  "Envoyer": "Send",
+  "Entrez Votre Nom": "Enter Your Name",
+  "Entrez Votre Email": "Enter Your Email",
+  "Entrez Votre Message": "Enter Your Message",
+  "Ce champ doit continir au moins 3 caractères.": "This field must contains at least 3 characters.",
+  "Cette adresse email n'est pas valide.": "This email address isn't valid.",
+  "Ce champ doit contenir au moins 20 caractères.": "This field must contéains at least 20 characters.",
+  "Une erreur est survenue lors de l'envoi du formulaire": "An error has occured while sending the formulary",
+  "Votre message a été envoyé avec succès": "Your message has been successfully sent",
+
+  "_footer": "",
+  "Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès": "Frontend web developer who designs web applications that drive the finished product to success"
+}

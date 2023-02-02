@@ -1,5 +1,7 @@
 import {Component} from "react";
 import icon from '../assets/favicon.png';
+import t from '../utils/translate';
+import LanguageSwitcher from "../components/LanguageSwitcher";
 
 export default class Navbar extends Component {
     constructor(props) {
@@ -29,21 +31,22 @@ export default class Navbar extends Component {
         return <nav className="navbar">
             <div className="navbar-brand">
                 <img src={icon} alt="Icône d'Alex Développement" className="navbar-brand-icon" />
-                <span className="navbar-brand-title">Alex Développement</span>
+                <span className="navbar-brand-title">{t`Alex Développement`}</span>
             </div>
             <ul className="navbar-menu navbar-large">
                 <li className="navbar-item">
-                    <a href="#home" className="navbar-link">Accueil</a>
+                    <a href="#home" className="navbar-link">{t`Accueil`}</a>
                 </li>
                 <li className="navbar-item">
-                    <a href="#about-me" className="navbar-link">A propos</a>
+                    <a href="#about-me" className="navbar-link">{t`A propos`}</a>
                 </li>
                 <li className="navbar-item">
-                    <a href="#projects" className="navbar-link">Projets</a>
+                    <a href="#projects" className="navbar-link">{t`Projets`}</a>
                 </li>
                 <li className="navbar-item">
-                    <a href="#contact" className="navbar-link">Contact</a>
+                    <a href="#contact" className="navbar-link">{t`Contact`}</a>
                 </li>
+                <LanguageSwitcher />
             </ul>
             <div className="navbar-small">
                 <a href="#!" id="navbar-toggler" className="navbar-toggler" onClick={this.toggleNavbar}>
@@ -53,17 +56,18 @@ export default class Navbar extends Component {
                     display: this.state.navbar ? "block" : "none"
                 }}>
                     <li className="navbar-item">
-                        <a href="#home" className="navbar-link" onClick={this.toggleNavbar}>Accueil</a>
+                        <a href="#home" className="navbar-link" onClick={this.toggleNavbar}>{t`Accueil`}</a>
                     </li>
                     <li className="navbar-item">
-                        <a href="#about-me" className="navbar-link" onClick={this.toggleNavbar}>A propos</a>
+                        <a href="#about-me" className="navbar-link" onClick={this.toggleNavbar}>{t`A propos`}</a>
                     </li>
                     <li className="navbar-item">
-                        <a href="#projects" className="navbar-link" onClick={this.toggleNavbar}>Projets</a>
+                        <a href="#projects" className="navbar-link" onClick={this.toggleNavbar}>{t`Projets`}</a>
                     </li>
                     <li className="navbar-item">
-                        <a href="#contact" className="navbar-link" onClick={this.toggleNavbar}>Contact</a>
+                        <a href="#contact" className="navbar-link" onClick={this.toggleNavbar}>{t`Contact`}</a>
                     </li>
+                    <LanguageSwitcher />
                 </ul>
             </div>
         </nav>

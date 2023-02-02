@@ -1,0 +1,51 @@
+{
+  "": "",
+
+  "_navbar": "",
+  "Alex Développement": "Alex Development",
+  "Accueil": "Accueil",
+  "A propos": "A propos",
+  "Projets": "Projets",
+  "Contact": "Contact",
+
+  "_hero": "",
+  "Je suis Alex Développement": "Je suis Alex Développement",
+  "Je suis un Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès": "Je suis un Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès",
+
+  "_about":  "",
+  "Ici vous trouverez plus d'informations à propos de moi, ce que je fais, et mes compétences actuelles de programmation informatique.": "Ici vous trouverez plus d'informations à propos de moi, ce que je fais, et mes compétences actuelles de programmation informatique.",
+  "En apprendre plus !": "En apprendre plus !",
+  "Je suis un Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès. Regardez mes traveaux dans la séction Projets.": "Je suis un Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès. Regardez mes traveaux dans la séction Projets.",
+  "J'ai commencé le Développement Web à l'âge de 12 ans par passion, ce qui m'a permis de forger des compétences solides au fil des années passées.": "J'ai commencé le Développement Web à l'âge de 12 ans par passion, ce qui m'a permis de forger des compétences solides au fil des années passées.",
+  "Je suis ouvert aux Opportunitées de travail où je pourrais contribuer, apprendre et grandir. Si vous avez un projet qui correspond à mes compétences et mon expérience, alors n'hésitez pas à me contacter.": "Je suis ouvert aux Opportunitées de travail où je pourrais contribuer, apprendre et grandir. Si vous avez un projet qui correspond à mes compétences et mon expérience, alors n'hésitez pas à me contacter.",
+  "Me Contacter": "Me Contacter",
+  "Mes Compétences": "Mes Compétences",
+
+  "_projects": "",
+  "Ici vous trouverez quelques uns de mes projets personnels et professionnels.": "Ici vous trouverez quelques uns de mes projets personnels et professionnels.",
+  "Projet Professionnel": "Projet Professionnel",
+  "Je suis actuellement posté en tant que Développeur au coeur d'Unosial, un groupe de bénévoles situé principalement sur Discord qui propose divers services pour des projets et des communautés.": "Je suis actuellement posté en tant que Développeur au coeur d'Unosial, un groupe de bénévoles situé principalement sur Discord qui propose divers services pour des projets et des communautés.",
+  "Visiter": "Visiter",
+  "Projet de Formation": "Projet de Formation",
+  "Reservia est une page web statique d'un moteur d'hébergements / de logements. C'est la première intégration que j'ai réalisé au cours de ma formation OpenClassrooms.": "Reservia est une page web statique d'un moteur d'hébergements / de logements. C'est la première intégration que j'ai réalisé au cours de ma formation OpenClassrooms.",
+  "FishEye est un site web accessible et dynamique repertoriant différents photographes, leurs photos et leurs tarifs. C'est un projet que j'ai réalisé durant ma formation de A à Z.": "FishEye est un site web accessible et dynamique repertoriant différents photographes, leurs photos et leurs tarifs. C'est un projet que j'ai réalisé durant ma formation de A à Z.",
+
+  "_contact": "",
+  "N'hésitez pas à me contacter via le formulaire ci-dessous pour prendre une prise de contact rapidement": "N'hésitez pas à me contacter via le formulaire ci-dessous pour prendre une prise de contact rapidement",
+  "Nom": "Nom",
+  "Email": "Email",
+  "Message": "Message",
+  "Envoie en cours...": "Envoie en cours...",
+  "Envoyer": "Envoyer",
+  "Entrez Votre Nom": "Entrez Votre Nom",
+  "Entrez Votre Email": "Entrez Votre Email",
+  "Entrez Votre Message": "Entrez Votre Message",
+  "Ce champ doit continir au moins 3 caractères.": "Ce champ doit continir au moins 3 caractères.",
+  "Cette adresse email n'est pas valide.": "Cette adresse email n'est pas valide.",
+  "Ce champ doit contenir au moins 20 caractères.": "Ce champ doit contenir au moins 20 caractères.",
+  "Une erreur est survenue lors de l'envoi du formulaire": "Une erreur est survenue lors de l'envoi du formulaire",
+  "Votre message a été envoyé avec succès": "Votre message a été envoyé avec succès",
+
+  "_footer": "",
+  "Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès": "Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès"
+}

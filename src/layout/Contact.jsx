@@ -1,5 +1,6 @@
 import {Component} from "react"
 import axios from "axios";
+import t from '../utils/translate';
 
 export default class Contact extends Component {
     constructor(props) {
@@ -84,19 +85,19 @@ export default class Contact extends Component {
         /* It's checking the name field */
         if (name.length < 3) finalErrors.push({
             field: 'name',
-            message: 'Ce champ doit continir au moins 3 caractères.'
+            message: t`Ce champ doit continir au moins 3 caractères.`
         })
 
         /* It's checking the email validity */
         if (email === '' || !email.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)) finalErrors.push({
             field: 'email',
-            message: 'Cette adresse email n\'est pas valide.'
+            message: t`Cette adresse email n\'est pas valide.`
         })
 
         /* It's checking the message field */
         if (message.length < 20) finalErrors.push({
             field: 'message',
-            message: 'Ce champ doit contenir au moins 20 caractères.'
+            message: t`Ce champ doit contenir au moins 20 caractères.`
         })
 
         /* It's updating the errors in the state */
@@ -119,7 +120,7 @@ export default class Contact extends Component {
         })
 
         /* It's sending the alert error */
-        this.alert("Une erreur est survenue lors de l'envoi du formulaire", "error")
+        this.alert(t`Une erreur est survenue lors de l'envoi du formulaire`, "error")
     }
 
     /**
@@ -140,7 +141,7 @@ export default class Contact extends Component {
             })
 
             /* It's sending the success alert */
-            this.alert("Votre message a été envoyé avec succès", "success")
+            this.alert(t`Votre message a été envoyé avec succès`, "success")
         })
             /* It's calling handleFormFailure if the request fail */
             .catch(() => this.handleFormFailure());
@@ -194,30 +195,30 @@ export default class Contact extends Component {
 
         return <section className="contact container bg-gray" id="contact">
             <article className="contact-header">
-                <h2 className="contact-title">Me Contacter</h2>
+                <h2 className="contact-title">{t`Me Contacter`}</h2>
                 <p className="contact-summary">
-                    N'hésitez pas à me contacter via le formulaire ci-dessous pour prendre une prise de contact rapidement
+                    {t`N'hésitez pas à me contacter via le formulaire ci-dessous pour prendre une prise de contact rapidement`}
                 </p>
             </article>
             <article className="contact-form">
                 <div className={"contact-form-group" + (this.getError('name') ? " error" : "")}>
-                    <label htmlFor="name" className="contact-form-label">Nom</label>
-                    <input type="text" id="name" value={name} onChange={this.handleChange} name="name" className="contact-form-input" placeholder="Entrez Votre Nom"/>
+                    <label htmlFor="name" className="contact-form-label">{t`Nom`}</label>
+                    <input type="text" id="name" value={name} onChange={this.handleChange} name="name" className="contact-form-input" placeholder={t`Entrez Votre Nom`}/>
                     {this.getError('name') ? <p className="contact-form-error">{this.getError('name')}</p> : ""}
                 </div>
                 <div className={"contact-form-group" + (this.getError('email') ? " error" : "")}>
-                    <label htmlFor="email" className="contact-form-label">Email</label>
-                    <input type="email" id="email" value={email} onChange={this.handleChange} name="email" className="contact-form-input" placeholder="Entrez Votre Email"/>
+                    <label htmlFor="email" className="contact-form-label">{t`Email`}</label>
+                    <input type="email" id="email" value={email} onChange={this.handleChange} name="email" className="contact-form-input" placeholder={t`Entrez Votre Email`}/>
                     {this.getError('email') ? <p className="contact-form-error">{this.getError('email')}</p> : ""}
                 </div>
                 <div className={"contact-form-group" + (this.getError('message') ? " error" : "")}>
-                    <label htmlFor="message" className="contact-form-label">Message</label>
-                    <textarea type="text" id="message" value={message} onChange={this.handleChange} name="message" className="contact-form-input contact-form-input--textarea" placeholder="Entrez Votre Message" rows="8">
+                    <label htmlFor="message" className="contact-form-label">{t`Message`}</label>
+                    <textarea type="text" id="message" value={message} onChange={this.handleChange} name="message" className="contact-form-input contact-form-input--textarea" placeholder={t`Entrez Votre Message`} rows="8">
                     </textarea>
                     {this.getError('message') ? <p className="contact-form-error">{this.getError('message')}</p> : ""}
                 </div>
                 <a href="#!" className={"btn contact-form-button" + ((loading || sent) ? " contact-form-button--disabled" : "")} id="send" onClick={this.handleSubmit}>
-                    {loading ? "Envoie en cours..." : "Envoyer"}
+                    {loading ? t`Envoie en cours...` : t`Envoyer`}
                 </a>
             </article>
         </section>
