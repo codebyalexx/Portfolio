@@ -1,0 +1,47 @@
+.theme-toggler {
+  position: relative;
+  background: #e8eced;
+  width: calc(2em * 2);
+  height: 2em;
+  border-radius: calc(2em / 2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #c9c9c9;
+}
+
+.theme-toggler-input {
+  opacity: 0;
+  height: 2em;
+  width: calc(2em * 2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.theme-toggler-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: calc(calc(2em * 2) / 2);
+  height: 2em;
+  width: calc(calc(2em * 2) / 2);
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #03adfc;
+  box-sizing: border-box;
+  box-shadow: 0 0 calc(calc(2em * 2) / 10) #03adfc;
+  transition: 0.1s ease-in;
+}
+
+.theme-toggler-input:checked + .theme-toggler-circle {
+  left: calc(calc(2em * 2) / 2);
+  right: 0;
+}
+
+.theme-toggler-emoji {
+  font-size: calc(2em * 0.6);
+  line-height: 0;
+}

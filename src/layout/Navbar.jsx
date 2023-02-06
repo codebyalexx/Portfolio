@@ -2,6 +2,7 @@ import {Component} from "react";
 import icon from '../assets/favicon.png';
 import t from '../utils/translate';
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import ThemeToggler from "../components/ThemeToggler";
 
 export default class Navbar extends Component {
     constructor(props) {
@@ -47,6 +48,7 @@ export default class Navbar extends Component {
                     <a href="#contact" className="navbar-link">{t`Contact`}</a>
                 </li>
                 <LanguageSwitcher />
+                <ThemeToggler />
             </ul>
             <div className="navbar-small">
                 <a href="#!" id="navbar-toggler" className="navbar-toggler" onClick={this.toggleNavbar}>
@@ -68,6 +70,7 @@ export default class Navbar extends Component {
                         <a href="#contact" className="navbar-link" onClick={this.toggleNavbar}>{t`Contact`}</a>
                     </li>
                     <LanguageSwitcher />
+                    <ThemeToggler />
                 </ul>
             </div>
         </nav>

@@ -1,0 +1,93 @@
+body.theme-night {
+  background-color: #1b1b1b;
+}
+
+.theme-night {
+  .navbar {
+    background-color: #1b1b1b;
+
+    &-brand-title {
+      color: #fff;
+    }
+
+    &-item,
+    &-link:not(:hover) {
+      color: #c8c8c8;
+    }
+
+    &-toggler-image {
+      filter: invert(1);
+    }
+
+    &-item {
+      background-color: #2d2d2d;
+      border-top: 2px solid #444444;
+    }
+  }
+
+  .bg {
+    &-shapes {
+      background: linear-gradient(to right, rgba(50, 50, 50, 10), rgba(33, 33, 33, 10)), url(http://localhost:3000/static/media/common-bg.9878fdb….svg);
+    }
+
+    &-gray {
+      background-color: #1e1e1e;
+    }
+  }
+
+  .hero,
+  .about-me,
+  .contact,
+  .projects {
+    &-title {
+      color: #fff;
+    }
+
+    &-subtitle {
+      color: #fff;
+    }
+
+    &-summary {
+      color: #bebebe;
+    }
+  }
+
+  .about-me-paragraph,
+  .projects-paragraph {
+    color: #bebebe;
+  }
+
+  .hero {
+    &-title,
+    &-summary {
+      color: #fff;
+    }
+
+    &-socials {
+      background-color: #161616;
+      box-shadow: none;
+
+      &-link:hover {
+        background-color: #3d3d3d;
+      }
+
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+
+  .contact-form {
+    background-color: #1b1b1b;
+
+    &-label {
+      color: #fff;
+    }
+
+    &-input {
+      background-color: #323232;
+      border: none;
+      color: #b0b0b0;
+    }
+  }
+}

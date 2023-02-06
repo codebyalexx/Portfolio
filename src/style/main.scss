@@ -9,6 +9,7 @@
 @import 'components/container';
 @import 'components/backgrounds';
 @import 'components/switcher';
+@import 'components/themeToggler';
 
 /* Layout */
 @import 'layout/navbar';
@@ -17,6 +18,10 @@
 @import 'layout/about-me';
 @import 'layout/projects';
 @import 'layout/contact';
+
+/* Themes */
+@import 'themes/day';
+@import 'themes/night';
 
 /* Vendors */
 @import 'vendors/fontawesome';
