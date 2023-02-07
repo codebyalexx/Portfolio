@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import cookieImage from '../assets/cookies.png';
+import t from '../utils/translate';
 
 export default class CookiesPopup extends Component {
   /**
@@ -40,8 +41,8 @@ export default class CookiesPopup extends Component {
     return (
       <div className="cookies" style={{ display: show ? 'flex' : 'none' }}>
         <img src={cookieImage} alt="Cookie icon" className="cookies-icon" />
-        <p className="cookies-caption">Ce site internet utilise les cookies pour son bon fonctionnement.</p>
-        <button type="button" className="cookies-close" onClick={this.accept}>Fermer</button>
+        <p className="cookies-caption">{t`Ce site internet utilise les cookies pour son bon fonctionnement.`}</p>
+        <button type="button" className="cookies-close" onClick={this.accept}>{t`Fermer`}</button>
       </div>
     );
   }

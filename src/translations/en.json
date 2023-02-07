@@ -47,5 +47,9 @@
   "Votre message a été envoyé avec succès": "Your message has been successfully sent",
 
   "_footer": "",
-  "Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès": "Frontend web developer who designs web applications that drive the finished product to success"
+  "Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès": "Frontend web developer who designs web applications that drive the finished product to success",
+
+  "_cookies": "",
+  "Ce site internet utilise les cookies pour son bon fonctionnement.": "This website use cookies for his good functioning.",
+  "Fermer": "Close"
 }
