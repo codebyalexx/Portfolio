@@ -1,43 +1,62 @@
-import {Component} from "react";
+import React, { Component } from 'react';
 
 export default class Alerts extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        /* It's defining the initial state */
-        this.state = {
-            alerts: []
-        }
-    }
+    /* It's defining the initial state */
+    this.state = {
+      alerts: [],
+    };
+  }
 
-    /**
+  /**
      * Create an alert
      * @param message {String} The alert message
      * @param type {String} The alert type
      */
-    alert(message, type) {
-        /* It's adding the alert to the state */
-        this.setState(() => {
-            return {
-                alerts: [...this.state.alerts, {message, type}]
-            }
-        })
+  // eslint-disable-next-line react/no-unused-class-component-methods
+  alert(message, type) {
+    const { alerts } = this.state;
+    /* It's adding the alert to the state */
+    this.setState(() => ({
+      alerts: [...alerts, { message, type }],
+    }));
 
-        /* It's clearing the alert from the state after delay */
-        setTimeout(() => {
-            this.setState(() => {
-                return {
-                    alerts: this.state.alerts.filter((alert) => alert.message !== message && alert.type !== type)
-                }
-            })
-        }, 7000)
-    }
+    /* Clear the alert after 7000 ms */
+    this.timeoutAlert({
+      message,
+      type,
+    });
+  }
 
-    render() {
-        const {alerts} = this.state;
+  /**
+     * Delete alert from state after x delay
+     * @param message {String} The alert message
+     * @param type {String} The alert type
+     * @param timeout {Number} The timeout suppression delay in ms
+     */
+  timeoutAlert({
+    message,
+    type,
+    timeout = 7000,
+  }) {
+    /* It's clearing the alert from the state after delay */
+    setTimeout(() => {
+      const { alerts } = this.state;
+      this.setState(() => ({
+        alerts: alerts.filter((alert) => alert.message !== message && alert.type !== type),
+      }));
+    }, timeout);
+  }
 
-        return <div className="alert-container">
-            {alerts.map((alert) => <div className={"alert alert-" + alert.type} key="x">{alert.message}</div>)}
-        </div>
-    }
+  render() {
+    const { alerts } = this.state;
+
+    return (
+      <div className="alert-container">
+        {alerts.map((alert) => <div className={`alert alert-${alert.type}`} key="x">{alert.message}</div>)}
+      </div>
+    );
+  }
 }
