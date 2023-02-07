@@ -9,6 +9,7 @@ import Projects from '../layout/Projects';
 import Footer from '../layout/Footer';
 import Contact from '../layout/Contact';
 import Alerts from '../components/Alerts';
+import CookiesPopup from '../components/CookiesPopup';
 
 /**
  * The Application Component
@@ -35,6 +36,7 @@ export default class App extends Component {
           <Contact alerts={this.alerts} />
         </main>
         <Footer />
+        <CookiesPopup />
       </div>
     );
   }

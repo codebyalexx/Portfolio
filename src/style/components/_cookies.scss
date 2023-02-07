@@ -1,0 +1,51 @@
+.cookies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffcf22;
+  color: #1b1b1b;
+  padding: 10px;
+  border-radius: 6px;
+
+  @media screen and (max-width: 1000px) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: 670px) {
+    width: 80%;
+    bottom: 15px;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 90%;
+  }
+
+  &-icon {
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  &-caption {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-break: strict;
+  }
+
+  &-close {
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    background-color: #323232;
+    color: #fff;
+  }
+}
