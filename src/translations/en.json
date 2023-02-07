@@ -45,6 +45,8 @@
   "Ce champ doit contenir au moins 20 caractères.": "This field must contéains at least 20 characters.",
   "Une erreur est survenue lors de l'envoi du formulaire": "An error has occured while sending the formulary",
   "Votre message a été envoyé avec succès": "Your message has been successfully sent",
+  "Vous avez déjà utilisé le formulaire trop récemment, veuillez réessayer utlérieurement": "You already used the form too recently, please try again later",
+  "secondes": "seconds",
 
   "_footer": "",
   "Développeur Web Frontend qui conçoit des applications Web qui mènent le produit fini à son succès": "Frontend web developer who designs web applications that drive the finished product to success",

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import t from '../utils/translate';
+import SessionManager from '../utils/SessionManager';
 
 export default class Contact extends Component {
   constructor(props) {
@@ -16,25 +17,67 @@ export default class Contact extends Component {
       sent: false,
       loading: false,
       once: false,
+      delay: 0,
     };
 
     /* It's binding the context to the local methods */
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.tick = this.tick.bind(this);
+
+    /* Check forms delay */
+    const contactDelay = localStorage.getItem('contact_delay');
+    if (contactDelay) {
+      /* It's getting the dates times */
+      const contactDelayTime = new Date(Number.parseInt(contactDelay, 10)).getTime();
+      const localTime = new Date().getTime();
+      /* Update the delay in state if needed */
+      if (contactDelayTime > localTime) {
+        this.state.delay = Math.round(
+          (contactDelayTime - localTime) / 1000,
+        );
+      }
+    }
+  }
+
+  /**
+   * This is executed at component loading
+   */
+  componentDidMount() {
+    this.timer = setInterval(this.tick, 1000);
+  }
+
+  /**
+   * This is executed at component suppression
+   */
+  componentWillUnmount() {
+    /* It's clearing the interval */
+    window.clearInterval(this.timer);
   }
 
   /**
    * It's handling the form submitting failure (to API)
    */
-  handleFormFailure() {
+  handleFormFailure(response) {
     /* It's re-setting the loading state */
     this.setState(() => ({
       loading: false,
       sent: false,
     }));
 
+    /* It's checking if the error comes from delay */
+    if (response.includes('DELAY')) {
+      /* Get delay from api response & update it on the local storage/state */
+      const d = response.split(';')[1];
+      localStorage.setItem('contact_delay', d);
+      this.setState(() => ({
+        delay: d,
+      }));
+      /* It's sending the alert error */
+      return this.alert(t`Vous avez déjà utilisé le formulaire trop récemment, veuillez réessayer utlérieurement`, 'error');
+    }
     /* It's sending the alert error */
-    this.alert(t`Une erreur est survenue lors de l'envoi du formulaire`, 'error');
+    return this.alert(t`Une erreur est survenue lors de l'envoi du formulaire`, 'error');
   }
 
   /**
@@ -57,8 +100,9 @@ export default class Contact extends Component {
    */
   handleSubmit() {
     /* It's checking if the forms has already been sent & first submitting */
-    const { sent } = this.state;
+    const { sent, delay } = this.state;
     if (sent) return;
+    if (delay > 0) return;
     this.setState(() => ({
       once: true,
     }));
@@ -121,6 +165,19 @@ export default class Contact extends Component {
   }
 
   /**
+   * This function is running every seconds
+   */
+  tick() {
+    /* It's decrementing the delay every 1s */
+    const { delay } = this.state;
+    if (delay > 0) {
+      this.setState(() => ({
+        delay: delay - 1,
+      }));
+    }
+  }
+
+  /**
      * It's checking the form validity
      * @return {Boolean} Returns true if the forms is valid
      */
@@ -168,15 +225,26 @@ export default class Contact extends Component {
      */
   sendForm() {
     /* It's submitting the contact form to the API */
-    axios.post('https://api0.alex-development.eu/message', this.state).then((res) => {
+    const { name, email, message } = this.state;
+    axios.post('https://api0.alex-development.eu/message', {
+      name,
+      email,
+      message,
+      sessionId: new SessionManager().sessionId,
+    }).then((res) => {
       /* It's checking if the response text is the good one */
-      if (res.data !== 'yes') return this.handleFormFailure();
+      if (res.data !== 'yes') return this.handleFormFailure(res.data);
 
       /* It's defining the state to  sent */
       this.setState(() => ({
         loading: false,
         sent: true,
       }));
+
+      /* It's putting the delay in the local storage */
+      let d = new Date();
+      d = new Date(d.getTime() + (3600 * 1000));
+      localStorage.setItem('contact_delay', d.getTime().toString());
 
       /* It's sending the success alert */
       return this.alert(t`Votre message a été envoyé avec succès`, 'success');
@@ -188,7 +256,7 @@ export default class Contact extends Component {
   render() {
     /* It's getting the contact form infos from state */
     const {
-      name, email, message, sent, loading,
+      name, email, message, sent, loading, delay,
     } = this.state;
 
     return (
@@ -215,8 +283,9 @@ export default class Contact extends Component {
             <textarea type="text" id="message" value={message} onChange={this.handleChange} name="message" className="contact-form-input contact-form-input--textarea" placeholder={t`Entrez Votre Message`} rows="8" />
             {this.getError('message') ? <p className="contact-form-error">{this.getError('message')}</p> : ''}
           </div>
-          <a href="#!" className={`btn contact-form-button${(loading || sent) ? ' contact-form-button--disabled' : ''}`} id="send" onClick={this.handleSubmit}>
-            {loading ? t`Envoie en cours...` : t`Envoyer`}
+          <a href="#!" className={`btn contact-form-button${(loading || sent || delay > 0) ? ' contact-form-button--disabled' : ''}`} id="send" onClick={this.handleSubmit}>
+            {/* eslint-disable-next-line no-nested-ternary */}
+            {loading ? t`Envoie en cours...` : (delay > 0) ? `${delay} ${t`secondes`}` : t`Envoyer`}
           </a>
         </article>
       </section>
