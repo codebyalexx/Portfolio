@@ -235,5 +235,5 @@ Contact.defaultProps = {
 };
 
 Contact.propTypes = {
-  alerts: PropTypes.node,
+  alerts: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
