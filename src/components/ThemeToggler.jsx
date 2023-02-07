@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 
 export default class ThemeToggler extends Component {
   /**
+   * Update the current theme
+   * @param theme {String} The theme name
+   */
+  static setTheme(theme) {
+    /* It's editing the body's classname depending on the theme */
+    document.body.className = `theme-${theme}`;
+  }
+
+  /**
      * The ThemeToggler constructor
      * @param props {Props} the component props
      */
@@ -18,7 +27,7 @@ export default class ThemeToggler extends Component {
 
     /* It's updating the theme at loading */
     const { theme } = this.state;
-    this.setTheme(theme);
+    ThemeToggler.setTheme(theme);
   }
 
   /**
@@ -40,15 +49,6 @@ export default class ThemeToggler extends Component {
 
     /* It's updating the theme */
     ThemeToggler.setTheme(newTheme);
-  }
-
-  /**
-     * Update the current theme
-     * @param theme {String} The theme name
-     */
-  static setTheme(theme) {
-    /* It's editing the body's classname depending on the theme */
-    document.body.className = `theme-${theme}`;
   }
 
   /**
