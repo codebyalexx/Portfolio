@@ -29,6 +29,7 @@ export default function translate(str) {
   const currentJson = userLanguage === 'fr' ? fr : en;
 
   /* It's returning the translation and logging if null */
+  // eslint-disable-next-line no-console
   if (!currentJson[str]) console.error('Missing translation for: ', str);
   return currentJson[str] || str;
 }
